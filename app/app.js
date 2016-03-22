@@ -23,6 +23,37 @@
                 return false;
             }
             return 0.5 * h * (a + b);
+        },
+        maxArray: function(t){
+            var max;
+            max=0;
+            for(var i=0; i< t.length; i++) {
+                if (typeof t[i] !== 'number') {
+                    return false;
+                }
+                else {
+                    if (t[i]>max) {
+                        max = t[i];
+                    }
+                    if (i==t.length-1) {
+                        return max;
+                    }
+                }
+            }
+        },
+        squareOdd: function(t){
+            for(var i=0; i< t.length; i++){
+                if(typeof t[i]=='number' && t[i]%2==1){
+                    t[i]*=t[i];
+                }
+                else if(typeof t[i]=='string' || typeof t[i]=='number' && t[i]%2==0){
+
+                }
+                else{
+                    return false;
+                }
+            }
+            return t;
         }
     }
 })();

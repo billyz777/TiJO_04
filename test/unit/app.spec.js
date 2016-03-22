@@ -35,4 +35,37 @@ describe('app', function () {
             expect(app.divide(101, 0)).toEqual(false);
         });
     });
+    describe('getDescendingNumbers function', function () {
+        it('should return array of numbers from a to b (include) desc', function () {
+            expect(app.getDescendingNumbers(10, 5)).toEqual("10 9 8 7 6 5");
+            expect(app.getDescendingNumbers(10, 7)).toEqual("10 9 8 7");
+        });
+    });
+    describe('areaOfTrapezoid function', function () {
+        it('should return area of trapezoid', function () {
+            expect(app.areaOfTrapezoid(1,1,2)).toEqual(2);
+            expect(app.areaOfTrapezoid(1,4,2)).toEqual(5);
+        });
+    });
+    describe('maxArray function', function () {
+        it('should return max number from array', function () {
+            expect(app.maxArray([1,1,2])).toEqual(2);
+            expect(app.maxArray([1,5,7])).toEqual(7);
+            expect(app.maxArray(["assd",5,2])).toEqual(false);
+            expect(app.maxArray([1,true,2])).toBe(false);
+            expect(app.maxArray([2,7,'z',2])).toBe(false);
+            expect(app.maxArray([2,7, ,2])).toBe(false);
+        });
+        it
+    });
+    describe('squareOdd function', function(){
+        it('should return array of numbers',function() {
+            expect(app.squareOdd([1, 2, 3, 4, 5, 6])).toEqual([1, 2, 9, 4, 25, 6]);
+            expect(app.squareOdd([2,4,31])).toEqual([2,4,961]);
+        });
+        it('should return false',function(){
+            expect(app.squareOdd([1,"dsa", ,5,6])).toBe(false);
+            expect(app.squareOdd([false,"dsa", ,' ',6])).toBe(false);
+        });
+    })
 });
